@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.DEBUG, filename='log.txt',format= '%(asctime)s
 
 #urllib3.disable
 logging.captureWarnings(True)
-
+#
 # wiki = WikiApi()
 # wiki = WikiApi({ 'locale' : 'uk'})
 # results = wiki.find('Thinkmobiles')
