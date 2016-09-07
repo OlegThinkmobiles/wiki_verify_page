@@ -9,6 +9,7 @@ import requests
 import smtplib
 import urllib3
 from twilio.rest import TwilioRestClient
+
 logging.basicConfig(level=logging.DEBUG, filename='log.txt',format= '%(asctime)s - %(levelname)s - %(message)s',)
 
 #urllib3.disable
@@ -111,7 +112,7 @@ try:
         server_ssl = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         server_ssl.ehlo() # optional, called by login()
         server_ssl.login("scamp68@gmail.com", "Seatao5803axleon87")
-        server_ssl.sendmail("scamp68@gmail.com", "oleg.stasiv@thinkmobiles.com", "Hello")
+        server_ssl.sendmail("scamp68@gmail.com", "oleg.stasiv@thinkmobiles.com", last_modify+" changed into wiki page")
         server_ssl.close()
 except Exception, e:
     print "Error"
