@@ -1,3 +1,9 @@
 2016-09-06 16:33:48,064 - INFO - Starting new HTTPS connection (1): uk.wikipedia.org
 2016-09-06 16:33:48,342 - DEBUG - Setting read timeout to None
 2016-09-06 16:33:48,376 - DEBUG - "GET /w/index.php?title=ThinkMobiles&action=history HTTP/1.1" 200 13639
+2016-09-07 16:17:43,372 - INFO - Starting new HTTPS connection (1): uk.wikipedia.org
+2016-09-07 16:17:43,480 - DEBUG - Setting read timeout to None
+2016-09-07 16:17:43,520 - DEBUG - "GET /w/index.php?title=ThinkMobiles&action=history HTTP/1.1" 200 13635
+2016-09-07 16:17:44,556 - DEBUG - {"sid": "SM0898f42cc1c14254bb1c193a141878cb", "date_created": "Wed, 07 Sep 2016 13:17:44 +0000", "date_updated": "Wed, 07 Sep 2016 13:17:44 +0000", "date_sent": null, "account_sid": "AC707e9ab0c1b55f8259e6d4e9738fc9ba", "to": "+380957089129", "from": "+12562700265", "messaging_service_sid": null, "body": "Sent from your Twilio trial account - Wikipedia page was changed...", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC707e9ab0c1b55f8259e6d4e9738fc9ba/Messages/SM0898f42cc1c14254bb1c193a141878cb.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC707e9ab0c1b55f8259e6d4e9738fc9ba/Messages/SM0898f42cc1c14254bb1c193a141878cb/Media.json"}}
+2016-09-07 16:17:44,556 - DEBUG - SMS was sent on +380957089129
+2016-09-07 16:17:45,996 - DEBUG - Email was sent to oleg.stasiv@thinkmobiles.com
