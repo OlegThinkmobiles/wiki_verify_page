@@ -21,7 +21,7 @@ logging.captureWarnings(True)
 # print article.summary
 
 #Список користувачів, яким дозволено редагувати статтю Thinkmobiles
-white_list = ['Viktoria Rogachenko', 'Scamp68']
+white_list = ['Viktoria Rogachenko']
 #------------------------------------------------------------------
 
 #Дивимось в історії змін, хто і коли останній редагував статтю
