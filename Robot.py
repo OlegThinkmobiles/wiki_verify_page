@@ -37,7 +37,7 @@ last_modify_time = time.split(',')[0]
 try:
 
     if last_modify in white_list:
-        logging.debug(u'Thinkmobiles wiki content was not changed.')
+        logging.debug(u'Thinkmobiles wiki content was not changed')
         print "Ok"
     else:
         # if os.stat("log.txt").st_size == 0:
