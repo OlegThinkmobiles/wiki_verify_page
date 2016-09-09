@@ -28,7 +28,7 @@ white_list = ['Viktoria Rogachenko', 'Scamp68']
 #Дивимось в історії змін, хто і коли останній редагував статтю
 page = requests.get('https://uk.wikipedia.org/w/index.php?title=ThinkMobiles&action=history',timeout=5)
 tree = html.fromstring(page.content)
-user_name = tree.xpath(".//*[@id='pagehistory']/li[1]/span[@class='history-user']/a/text()")
+user_name = tree.xpath(".//*[@id='pagehistory']/li[1]/span[@class='history-user']/a//text()")
 time = tree.xpath(".//*[@id='pagehistory']/li[1]/a[@class='mw-changeslist-date']/text()")[0]
 last_modify = user_name[0]
 last_modify_time = time.split(',')[0]
