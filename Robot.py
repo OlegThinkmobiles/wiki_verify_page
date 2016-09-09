@@ -22,7 +22,7 @@ logging.captureWarnings(True)
 # print article.summary
 
 #Список користувачів, яким дозволено редагувати статтю Thinkmobiles
-white_list = ['Viktoria Rogachenko', 'Scamp68', 'Irina Grab']
+white_list = ['Viktoria Rogachenko','Scamp68', 'Irina Grab']
 #------------------------------------------------------------------
 
 #Дивимось в історії змін, хто і коли останній редагував статтю
@@ -44,7 +44,7 @@ last_modify_time1 = time1.split(',')[0]
 
 try:
 
-    if last_modify and last_modify1 in white_list:
+    if last_modify in white_list and last_modify1 in white_list:
         logging.debug(u'Thinkmobiles wiki content was not changed')
         print "Ok"
     else:
