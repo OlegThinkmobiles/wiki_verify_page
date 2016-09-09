@@ -22,8 +22,11 @@ logging.captureWarnings(True)
 # print article.summary
 
 #Список користувачів, яким дозволено редагувати статтю Thinkmobiles
-white_list = ['Viktoria Rogachenko','Scamp68', 'Irina Grab']
+my_list = ['Viktoria Rogachenko','Scamp68', 'Irina Grab', 'Юра Бисага']
 #------------------------------------------------------------------
+white_list = []
+for x in my_list:
+    white_list.append(x.decode('utf-8'))
 
 #Дивимось в історії змін, хто і коли останній редагував статтю
 page = requests.get('https://uk.wikipedia.org/w/index.php?title=ThinkMobiles&action=history',timeout=5)
