@@ -114,13 +114,13 @@ try:
         client = TwilioRestClient(account_sid, auth_token)
 
         message = client.messages.create(to="+380957089129", from_="+12562700265",
-                                             body= last_modify + "changed into wiki page.")
+                                             body= "Something has been changed in wikipedia.")
         logging.debug(u'SMS was sent on +380957089129')
         server = smtplib.SMTP('smtp.gmail.com:587')
         server_ssl = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         server_ssl.ehlo() # optional, called by login()
         server_ssl.login("scamp68@gmail.com", "Seatao5803axleon87")
-        server_ssl.sendmail("scamp68@gmail.com", "oleg.stasiv@thinkmobiles.com", last_modify+" changed into wiki page.")
+        server_ssl.sendmail("scamp68@gmail.com", "oleg.stasiv@thinkmobiles.com", "Something has been changed in wikipedia.")
         server_ssl.close()
         logging.debug(u'Email was sent to oleg.stasiv@thinkmobiles.com')
 except Exception, e:
