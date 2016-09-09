@@ -106,7 +106,7 @@ try:
         client = TwilioRestClient(account_sid, auth_token)
 
         message = client.messages.create(to="+380957089129", from_="+12562700265",
-                                             body="Wikipedia page was changed...")
+                                             body= last_modify + "changed into wiki page")
         logging.debug(u'SMS was sent on +380957089129')
         server = smtplib.SMTP('smtp.gmail.com:587')
         server_ssl = smtplib.SMTP_SSL("smtp.gmail.com", 465)
