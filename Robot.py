@@ -22,7 +22,7 @@ logging.captureWarnings(True)
 # print article.summary
 
 #Список користувачів, яким дозволено редагувати статтю Thinkmobiles
-white_list = ['Viktoria Rogachenko', 'Scamp68']
+white_list = ['Viktoria Rogachenko', 'Scamp68', 'Irina Grab']
 #------------------------------------------------------------------
 
 #Дивимось в історії змін, хто і коли останній редагував статтю
@@ -33,10 +33,18 @@ time = tree.xpath(".//*[@id='pagehistory']/li[1]/a[@class='mw-changeslist-date']
 last_modify = user_name[0]
 last_modify_time = time.split(',')[0]
 #-------------------------------------------------------------
+#Дивимось в історії змін, хто і коли останній редагував статтю в обговоренні
+page1 = requests.get('https://uk.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F:ThinkMobiles&action=history',timeout=5)
+tree1 = html.fromstring(page1.content)
+user_name1 = tree1.xpath(".//*[@id='pagehistory']/li[1]/span[@class='history-user']/a//text()")
+time1 = tree1.xpath(".//*[@id='pagehistory']/li[1]/a[@class='mw-changeslist-date']/text()")[0]
+last_modify1 = user_name1[0]
+last_modify_time1 = time1.split(',')[0]
+#-------------------------------------------------------------
 
 try:
 
-    if last_modify in white_list:
+    if last_modify and last_modify1 in white_list:
         logging.debug(u'Thinkmobiles wiki content was not changed')
         print "Ok"
     else:
