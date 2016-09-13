@@ -2,6 +2,7 @@
 import logging
 import os
 from collections import Counter
+from requests import ConnectionError
 
 from wikiapi import WikiApi
 from lxml import html
@@ -29,12 +30,19 @@ for x in my_list:
     white_list.append(x.decode('utf-8'))
 
 #Дивимось в історії змін, хто і коли останній редагував статтю
-page = requests.get('https://uk.wikipedia.org/w/index.php?title=ThinkMobiles&action=history',timeout=5)
-tree = html.fromstring(page.content)
-user_name = tree.xpath(".//*[@id='pagehistory']/li[1]/span[@class='history-user']/a//text()")
-time = tree.xpath(".//*[@id='pagehistory']/li[1]/a[@class='mw-changeslist-date']/text()")[0]
-last_modify = user_name[0]
-last_modify_time = time.split(',')[0]
+try:
+    page = requests.get('https://uk.wikipedia.org/w/index.php?title=ThinkMobiles&action=history',timeout=5)
+    tree = html.fromstring(page.content)
+    user_name = tree.xpath(".//*[@id='pagehistory']/li[1]/span[@class='history-user']/a//text()")
+    time = tree.xpath(".//*[@id='pagehistory']/li[1]/a[@class='mw-changeslist-date']/text()")[0]
+    last_modify = user_name[0]
+    last_modify_time = time.split(',')[0]
+except ConnectionError:
+    print "Trouble with internet connection"
+    logging.debug(u'Trouble with internet connection')
+except IndexError:
+    print "Problem with xpath"
+    logging.debug(u'Problem with xpath')
 #-------------------------------------------------------------
 #Дивимось в історії змін, хто і коли останній редагував статтю в обговоренні
 # page1 = requests.get('https://uk.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F:ThinkMobiles&action=history',timeout=5)
