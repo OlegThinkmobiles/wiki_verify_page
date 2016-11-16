@@ -2384,3 +2384,7 @@
 2016-11-16 11:45:56,197 - DEBUG - Setting read timeout to 5
 2016-11-16 11:45:56,241 - DEBUG - "GET /w/index.php?title=ThinkMobiles&action=history HTTP/1.1" 200 13727
 2016-11-16 11:45:56,319 - DEBUG - Thinkmobiles wiki content was not changed
+2016-11-16 12:45:50,962 - INFO - Starting new HTTPS connection (1): uk.wikipedia.org
+2016-11-16 12:45:51,120 - DEBUG - Setting read timeout to 5
+2016-11-16 12:45:51,152 - DEBUG - "GET /w/index.php?title=ThinkMobiles&action=history HTTP/1.1" 200 13727
+2016-11-16 12:45:51,191 - DEBUG - Thinkmobiles wiki content was not changed
