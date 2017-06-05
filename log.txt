@@ -8126,3 +8126,6 @@
 2017-06-05 08:25:16,960 - INFO - Starting new HTTPS connection (1): uk.wikipedia.org
 2017-06-05 08:25:17,259 - DEBUG - Setting read timeout to 5
 2017-06-05 08:25:17,330 - DEBUG - "GET /w/index.php?title=ThinkMobiles&action=history HTTP/1.1" 200 13665
+2017-06-05 08:25:29,863 - INFO - Starting new HTTPS connection (1): uk.wikipedia.org
+2017-06-05 08:25:30,093 - DEBUG - Setting read timeout to 5
+2017-06-05 08:25:30,171 - DEBUG - "GET /w/index.php?title=ThinkMobiles&action=history HTTP/1.1" 200 13665
